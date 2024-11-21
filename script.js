@@ -1,4 +1,5 @@
-if (performance.navigation.type === 1) {
+const navigationEntries = performance.getEntriesByType("navigation")[0];
+if (navigationEntries && navigationEntries.type === "reload") {
     window.location.href = 'index.html';
 }
 
